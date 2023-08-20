@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhai:wght@400&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <title>Конфигуратор</title>
+  </head>
+  <body>
+    <div class="loader hide">
+      <div class="loader-content">
+        <img
+          class="star-1-svgrepo-com-1-icon"
+          alt=""
+          src="./public/star1svgrepocom-1.svg"
+        />
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="main-div">
+        <div class="vector-parent">
+          <div class="logo">
+            <img class="vector-icon" alt="" src="./public/vector.svg" />
+          </div>
+          <div class="header-info">
+            <div class="div11">КОНФИГУРАТОР</div>
+            <div class="telegram">TELEGRAM</div>
+            <div class="div10">+7 (999) 999 99 99</div>
+            <div class="buy-wrapper">
+              <div class="div9">КУПИТЬ ЧАСЫ</div>
+              <div class="buy_arrow">
+                <img
+                  class="arrow-right-up-358-svgrepo-com-icon"
+                  alt=""
+                  src="./public/arrowrightup358svgrepocom-1.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div">
+          <img class="child" alt="" src="./public/line-53.svg" />
+          <!-- <div class="div8">НАЗАД</div> -->
+          <div class="div1">
+            КОНФИГУРАТОР ЧАСОВ
+            <img
+              class="star-1-svgrepo-com-1-icon"
+              alt=""
+              src="./public/star1svgrepocom-1.svg"
+            />
+          </div>
+          <div class="konfigurator">
+            <div class="left">
+              <div class="edit_watch">
+                <div class="strap_option metal_strap_option selected_option">
+                  МЕТАЛЛИЧЕСКИЙ РЕМЕШОК
+                </div>
+                <div class="strap_option rubber_strap_option">
+                  КАУЧУКОВЫЙ РЕМЕШОК
+                </div>
+
+                <div class="form-check">
+                  <div class="cntr">
+                    <input
+                      value=""
+                      type="checkbox"
+                      id="cbx"
+                      class="hidden-xs-up"
+                    />
+                    <label for="cbx" class="cbx"></label>
+                  </div>
+                  <div>Версия bluetooth</div>
+                </div>
+
+                <div class="accordion" id="accordion">
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseDisplay"
+                        aria-expanded="true"
+                        aria-controls="collapseDisplay"
+                      >
+                        <div class="edit_name">Дисплей</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseDisplay"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body displays"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="accordion-item select_button_block rubber_strap_option_selected hide"
+                  >
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseMetalCase"
+                        aria-expanded="true"
+                        aria-controls="collapseMetalCase"
+                      >
+                        <div class="edit_name">Металлический корпус</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseMetalCase"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body metal_body"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="accordion-item select_button_block rubber_strap_option_selected hide"
+                  >
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTransparentBody"
+                        aria-expanded="true"
+                        aria-controls="collapseTransparentBody"
+                      >
+                        <div class="edit_name">Прозрачный корпус</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTransparentBody"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body transparent_body"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="accordion-item select_button_block metal_strap_option_selected"
+                  >
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseMetalStraps"
+                        aria-expanded="true"
+                        aria-controls="collapseMetalStraps"
+                      >
+                        <div class="edit_name">Корпус</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseMetalStraps"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body metal_straps"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="accordion-item select_button_block rubber_strap_option_selected hide"
+                  >
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStraps"
+                        aria-expanded="true"
+                        aria-controls="collapseStraps"
+                      >
+                        <div class="edit_name">Ремешок</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStraps"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body straps"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseArrows"
+                        aria-expanded="true"
+                        aria-controls="collapseArrows"
+                      >
+                        <div class="edit_name">Стрелки</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseArrows"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body arrows"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseDials"
+                        aria-expanded="true"
+                        aria-controls="collapseDials"
+                      >
+                        <div class="edit_name">Цифреблат</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseDials"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body dials"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseClockPoints"
+                        aria-expanded="true"
+                        aria-controls="collapseClockPoints"
+                      >
+                        <div class="edit_name">Метки</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseClockPoints"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body clock_points"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseCircles"
+                        aria-expanded="true"
+                        aria-controls="collapseCircles"
+                      >
+                        <div class="edit_name">Оправа</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseCircles"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body circles"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseAdditional"
+                        aria-expanded="true"
+                        aria-controls="collapseAdditional"
+                      >
+                        <div class="edit_name">Доп. опции</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseAdditional"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body additional">
+                        <div data-id="sapphire" class="addition-item">
+                          Сапфировое стекло
+                        </div>
+                        <div data-id="engraving" class="addition-item">
+                          Гравировка
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="main_watch_block">
+                <div id="sticky_watch_block">
+                  <div class="main_watch">
+                    <div class="main_price">
+                      <span class="price">21.000</span>
+                      <span class="currency">руб</span>
+                    </div>
+                    <!-- Дисплей -->
+                    <div class="main_watch_div">
+                      <img
+                        id="displays_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/displays/displays1.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Металлический корпус -->
+                    <div
+                      class="main_watch_div metal_body_watch rubber_strap_option_selected hide"
+                    >
+                      <img
+                        id="metal_body_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/metal_body/metal_body6.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Прозрачный корпус -->
+                    <div
+                      class="main_watch_div transparent_body_watch rubber_strap_option_selected"
+                    >
+                      <img
+                        id="transparent_body_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/transparent_body/transparent_body1.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Ремешки -->
+                    <div
+                      class="main_watch_div rubber_strap_option_selected hide"
+                    >
+                      <img
+                        id="straps_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/straps/straps5.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Металлические ремешки -->
+                    <div class="main_watch_div metal_strap_option_selected">
+                      <img
+                        id="metal_straps_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/metal_straps/metal_straps11.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Оправа -->
+                    <div class="main_watch_div">
+                      <img
+                        id="circles_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/circles/circles4.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Стрелки -->
+                    <div class="main_watch_div">
+                      <img
+                        id="arrows_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/arrows/arrows8.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Точки -->
+                    <div class="main_watch_div">
+                      <img
+                        id="clock_points_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/clock_points/clock_points9.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <!-- Циферблаты -->
+                    <div class="main_watch_div">
+                      <img
+                        id="dials_watch"
+                        src="https://raw.githubusercontent.com/sku757/konfig/main/image/dials/dials17.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="actions-buttons">
+                    <div class="download">Сохранить</div>
+                    <button
+                      class="rectangle-parent"
+                      data-bs-toggle="modal"
+                      data-bs-target="#postModal"
+                    >
+                      <div class="group-child">
+                        <div class="div12">ОТПРАВИТЬ</div>
+                        <img
+                          alt=""
+                          src="./public/arrowrightup358svgrepocom-3.svg"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="postModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-3" id="exampleModalLabel">
+                          ОТПРАВИТЬ ЗАКАЗ
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <label>
+                          <input
+                            class="telegram-nickname"
+                            placeholder="НИК ТЕЛЕГРАМ"
+                          />
+                        </label>
+                        <label>
+                          <textarea
+                            class="comment"
+                            placeholder="КОММЕНТАРИЙ"
+                          ></textarea>
+                        </label>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          disabled
+                          class="rectangle-parent send"
+                          data-bs-dismiss="modal"
+                        >
+                          <div class="group-child">
+                            <div class="div12">ОТПРАВИТЬ</div>
+                            <img
+                              alt=""
+                              src="./public/arrowrightup358svgrepocom-3.svg"
+                            />
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="child46">
+        <div class="child-main-content">
+          <div class="logo">
+            <img class="vector-icon2" alt="" src="./public/vector.svg" />
+          </div>
+          <div class="parent">
+            <div class="div13">ГЛАВНАЯ</div>
+            <div class="div15">КОНФИГУРАТОР</div>
+            <div class="div16">ОНАС</div>
+            <div class="div17">КОНТАКТЫ</div>
+          </div>
+          <div class="social">
+            <div class="social-wrapper">
+              <img class="vector-icon1" alt="" src="./public/vector1.svg" />
+              <img class="page-1-icon" alt="" src="./public/page1.svg" />
+              <img
+                class="vk-svgrepo-com-2-icon"
+                alt=""
+                src="./public/vksvgrepocom-2.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <img class="child47" alt="" src="./public/line-104.svg" />
+        <div class="div14">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script type="text/javascript" src="js/dom-to-image.min.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sticksy/dist/sticksy.min.js"></script> -->
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- <script>
+    var stickyElement = new Sticksy(".js-sticky-widget");
+    // you can handle state changing
+    stickyEl.onStateChanged = function (state) {
+      if (state === "fixed") {
+        stickyEl.nodeRef.classList.add("widget--sticky");
+      } else {
+        stickyEl.nodeRef.classList.remove("widget--sticky");
+      }
+    };
+  </script> -->
+</html>

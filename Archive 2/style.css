@@ -1,0 +1,39 @@
+.select_button_block{
+	width: 600px;
+	margin-bottom: 50px;
+}
+.select_button{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	
+}
+.select_button img{
+	width: 100px;
+	height: 100px;
+	pointer-events: none;
+}
+.main_watch{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 500px;
+	height: 500px;
+	border: 2px solid #000000;
+	pointer-events: none;
+}
+.main_watch img{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 400px;
+	height: 400px;
+}
+
+.straps{
+	margin-bottom: 50px;
+}
+
+.none {
+	display: none;
+}

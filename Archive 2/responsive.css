@@ -1,0 +1,225 @@
+@media (max-width: 1536px) {
+  .wrapper {
+    width: 90%;
+  }
+  .main_watch {
+    width: 720px;
+  }
+  .main_watch img {
+    left: 80px;
+  }
+  .main_price {
+    right: 60px;
+  }
+}
+@media (max-width: 1280px) {
+  .footer {
+    display: none;
+  }
+  .header-info > div {
+    margin-left: 1.5rem;
+  }
+  /* exception */
+  .buy-wrapper > div {
+    margin-left: 0;
+  }
+
+  .div8 {
+    display: none;
+  }
+  .div1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .div1 img {
+    display: none;
+  }
+
+  .main_watch {
+    width: 100%;
+  }
+  .edit_watch {
+    width: 100%;
+  }
+  /* .main_watch img {
+    left: 50px;
+  } */
+  .main_watch img {
+    left: 20%;
+  }
+
+  .konfigurator {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 1180px) and (max-width: 1280px) {
+  .main_watch img {
+    left: 24%;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1180px) {
+  .main_watch img {
+    left: 22%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-info > div {
+    font-size: 14px;
+  }
+  .div1 {
+    font-size: 42px;
+  }
+  .main_watch img {
+    left: 20%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .main_watch img {
+    left: 18%;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .main_watch img {
+    left: 16%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-info > div:not(.buy-wrapper) {
+    display: none;
+  }
+  .header-info > div {
+    font-size: 16px;
+  }
+  .main_watch img {
+    left: 10%;
+  }
+  .main_price {
+    right: 20px;
+    top: 20px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main_watch img {
+    left: 5%;
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+  }
+  .main_watch {
+    height: 400px;
+  }
+  .main_price {
+    font-size: 18px;
+  }
+  .download {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .div1 {
+    margin-top: 25px;
+    font-size: 26px;
+  }
+  .edit_name {
+    font-size: 18px;
+  }
+  .select_button_block {
+    border-radius: 10px;
+  }
+  .accordion-item:first-of-type,
+  .accordion-item:last-of-type {
+    border-radius: 10px !important;
+  }
+  .strap_option {
+    padding: 18px 30px;
+  }
+  .selected_option,
+  .strap_option {
+    border-radius: 50px;
+    font-size: 16px;
+  }
+  .form-check {
+    justify-content: center;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white;
+    align-items: center;
+  }
+  .select_button_block {
+    padding: 20px 30px;
+  }
+  .konfigurator {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .main_watch img {
+    left: 15%;
+    height: 300px;
+    width: 300px;
+  }
+  .main_watch {
+    height: 300px;
+  }
+  .main_price {
+    font-size: 16px;
+  }
+  .actions-buttons div {
+    font-size: 14px;
+  }
+  .group-child {
+    border-radius: 15px;
+    padding: 15px 25px;
+  }
+  .download {
+    border-radius: 15px;
+    padding: 15px 25px;
+  }
+  .konfigurator {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_watch img {
+    height: 240px;
+    width: 240px;
+  }
+  .main_watch {
+    height: 240px;
+  }
+  .main_price {
+    font-size: 14px;
+    /* top: 25px;
+    right: 25px; */
+  }
+  .konfigurator {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .actions-buttons div {
+    font-size: 12px;
+  }
+  .group-child {
+    font-size: 12px;
+  }
+  .download {
+    font-size: 12px;
+  }
+}
