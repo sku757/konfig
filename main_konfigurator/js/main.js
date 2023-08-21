@@ -32,7 +32,7 @@ const optionsForBluetooth = {
 // Цены доп. услуг в тыс. руб
 const additionalPrices = {
     sapphire: 5,
-    engraving: 3,
+    engraving: 4,
 }
 
 // Выбранные детали при металлическом ремешке
@@ -311,28 +311,28 @@ additional_buttons.forEach((option) => {
     })
 })
 
-// Функция отправки формы
-const sendRequest = async (message) => {
-    return await fetch('https://someCrm.org', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(message)
-    });
-}
+// // Функция отправки формы
+// const sendRequest = async (message) => {
+//     return await fetch('https://someCrm.org', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json;charset=utf-8'
+//         },
+//         body: JSON.stringify(message)
+//     });
+// }
 
-// Действие при клике на кнопку отправить
-send_button.addEventListener('click', () => {
-    let resultObject = metal_strap_selected ? metalPickedOptions : rubberPickedOptions;
-    resultObject['telegram'] = document.querySelector('.telegram-nickname').value;
-    resultObject['comment'] = document.querySelector('.comment').value;
-    sendRequest(resultObject).then(r => console.log(r));
-})
+// // Действие при клике на кнопку отправить
+// send_button.addEventListener('click', () => {
+//     let resultObject = metal_strap_selected ? metalPickedOptions : rubberPickedOptions;
+//     resultObject['telegram'] = document.querySelector('.telegram-nickname').value;
+//     resultObject['comment'] = document.querySelector('.comment').value;
+//     sendRequest(resultObject).then(r => console.log(r));
+// })
 
-telegram_input.oninput = (e) => {
-    send_button.disabled = !e.target.value;
-}
+// telegram_input.oninput = (e) => {
+//     send_button.disabled = !e.target.value;
+// }
 
 // Обработка клика на сохранение изображения
 

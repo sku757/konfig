@@ -1003,7 +1003,7 @@
 
 .strap_option {
   background: #1e1e1e;
-  border-radius: 15px;
+  border-radius: 25px;
   font-size: 18px;
   color: white;
   text-align: center;
@@ -1029,12 +1029,15 @@
 }
 
 .actions-buttons {
+  justify-content: center;
   margin-top: 48px;
   display: flex;
-  justify-content: center;
   gap: 10px;
   font-size: var(--font-size-base);
   color: var(--primary-contrast);
+  align-items: center;
+  width: 800px;
+  flex-direction: column;
 }
 
 .actions-buttons div {
@@ -1407,3 +1410,29 @@ button[disabled] {
   border-top-left-radius: unset !important;
   border-top-right-radius: unset !important;
 } */
+
+.send_text{
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  width: 600px;
+  
+}
+.tg{
+  color: #C8FF2A;
+  transition: color 0.1s ease-in-out;
+}
+
+.tg:hover{
+  color: #6C3DF2;
+}
+
+.buy_watch{
+  text-decoration: none;
+  color: #C8FF2A;
+  transition: border-bottom 0,2s ease-in-out;
+}
+
+.buy_watch:hover{
+  border-bottom: 1px solid #C8FF2A;
+}
