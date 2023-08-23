@@ -775,6 +775,7 @@
   height: 30px;
   font-size: var(--font-size-base);
   color: var(--color-gray-500);
+  padding-top: 15px;
 }
 
 .child46 {
@@ -907,9 +908,9 @@
 }
 .main_watch {
   position: sticky;
-  width: 806px;
+  width: 815px;
   height: 515px;
-  border-radius: 5px;
+  border-radius: 15px;
   background: #1d1827;
   object-fit: cover;
   top: 0px;
@@ -918,7 +919,7 @@
 .fixed-top-wrapper {
   position: fixed;
   top: 0;
-  width: 90% !important;
+  width: 815px;
 }
 .main_watch img {
   position: absolute;
@@ -1036,8 +1037,7 @@
   font-size: var(--font-size-base);
   color: var(--primary-contrast);
   align-items: center;
-  width: 800px;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .actions-buttons div {
@@ -1412,11 +1412,10 @@ button[disabled] {
 } */
 
 .send_text{
-  text-align: center;
+  text-align: left;
   text-decoration: none;
-  margin-top: 15px;
   width: 600px;
-  
+  margin-left: 10px;
 }
 .tg{
   color: #C8FF2A;

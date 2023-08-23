@@ -11,6 +11,9 @@
   .main_price {
     right: 60px;
   }
+  .fixed-top-wrapper{
+    width: 90% !important;
+  }
 }
 @media (max-width: 1280px) {
   .footer {
@@ -52,6 +55,9 @@
   .konfigurator {
     flex-direction: column-reverse;
   }
+  .fixed-top-wrapper{
+    width: 90% !important;
+  }
 }
 
 @media (min-width: 1180px) and (max-width: 1280px) {
@@ -87,6 +93,9 @@
   .main_watch img {
     left: 16%;
   }
+  .fixed-top-wrapper{
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -103,6 +112,9 @@
     right: 20px;
     top: 20px;
     font-size: 22px;
+  }
+  .fixed-top-wrapper{
+    width: 90% !important;
   }
 }
 
@@ -144,7 +156,7 @@
   }
   .selected_option,
   .strap_option {
-    border-radius: 50px;
+    border-radius: 15px;
     font-size: 16px;
   }
   .form-check {
@@ -162,6 +174,9 @@
     display: flex;
     gap: 3rem;
   }
+  .fixed-top-wrapper{
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 510px) {
@@ -178,6 +193,7 @@
   }
   .actions-buttons div {
     font-size: 14px;
+    align-items: center;
   }
   .group-child {
     border-radius: 15px;
@@ -190,6 +206,9 @@
   .konfigurator {
     display: flex;
     gap: 3rem;
+  }
+  .fixed-top-wrapper{
+    width: 90% !important;
   }
 }
 
@@ -210,6 +229,12 @@
     display: flex;
     gap: 3rem;
   }
+  .div1{
+    font-size: 22px;
+  }
+  .fixed-top-wrapper{
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 375px) {
@@ -222,4 +247,5 @@
   .download {
     font-size: 12px;
   }
+ 
 }

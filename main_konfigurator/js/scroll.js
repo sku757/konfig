@@ -39,7 +39,7 @@ const removeStickyBlock = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-   if (window.innerWidth < 640) {
+   if (window.innerWidth < 10000) {
     stickItemInit();
   }
 });
