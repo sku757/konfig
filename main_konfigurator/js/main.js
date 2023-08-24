@@ -238,7 +238,7 @@ const groupsCountItems = {
     metal_body: 17,
     transparent_body: 4,
     straps: 13,
-    metal_straps: 19,
+    metal_straps: 21,
     circles: 19,
     arrows: 16,
     clock_points: 20,
