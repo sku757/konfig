@@ -15,7 +15,7 @@ const defaultValues = {
     straps: 5,
     metal_straps: 1,
     circles: 1,
-    arrows: 8,
+    arrows: 1,
     clock_points: 1,
     dials: 17
 }
@@ -40,7 +40,7 @@ let metalPickedOptions = {
     displays: 1,
     metal_straps: 11,
     circles: 1,
-    arrows: 8,
+    arrows: 1,
     clock_points: 1,
     dials: 17
 }
@@ -52,7 +52,7 @@ let rubberPickedOptions = {
     metal_body: 6,
     straps: 5,
     circles: 1,
-    arrows: 8,
+    arrows: 1,
     clock_points: 1,
     dials: 17
 }
