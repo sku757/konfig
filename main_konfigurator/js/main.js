@@ -241,7 +241,7 @@ const groupsCountItems = {
     metal_straps: 21,
     circles: 18,
     arrows: 13,
-    clock_points: 20,
+    clock_points: 19,
     dials: 34
 }
 
