@@ -240,7 +240,7 @@ const groupsCountItems = {
     straps: 13,
     metal_straps: 21,
     circles: 19,
-    arrows: 16,
+    arrows: 13,
     clock_points: 20,
     dials: 35
 }
