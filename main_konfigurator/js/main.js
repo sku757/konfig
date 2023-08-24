@@ -11,7 +11,7 @@ let bluetooth_option = document.querySelector('#cbx');
 // Настройка дефолтных деталей
 const defaultValues = {
     displays: 1,
-    metal_body: 6,
+    metal_body: 1,
     straps: 5,
     metal_straps: 1,
     circles: 1,
@@ -49,7 +49,7 @@ let metalPickedOptions = {
 
 let rubberPickedOptions = {
     displays: 1,
-    metal_body: 6,
+    metal_body: 1,
     straps: 5,
     circles: 1,
     arrows: 1,
@@ -235,12 +235,12 @@ const getBluetoothElements = (groupName, nums, defaultIndex) => {
 // Количество элементов в каждой группе
 const groupsCountItems = {
     displays: 3,
-    metal_body: 17,
+    metal_body: 19,
     transparent_body: 4,
     straps: 13,
     metal_straps: 21,
     circles: 18,
-    arrows: 13,
+    arrows: 14,
     clock_points: 19,
     dials: 34
 }
