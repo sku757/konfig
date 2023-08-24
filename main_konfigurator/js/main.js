@@ -242,7 +242,7 @@ const groupsCountItems = {
     circles: 19,
     arrows: 13,
     clock_points: 20,
-    dials: 35
+    dials: 34
 }
 
 getElements(groupsCountItems['displays'],'displays', defaultValues['displays']);
