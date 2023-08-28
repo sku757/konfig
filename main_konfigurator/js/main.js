@@ -366,7 +366,7 @@ download_button.addEventListener('click', () => {
                 console.error('oops, something went wrong!', error);
             });
 
-    }, 1000)
+    }, 3000)
 
 })
 
