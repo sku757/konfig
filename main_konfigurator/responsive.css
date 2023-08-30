@@ -210,9 +210,6 @@
   .fixed-top-wrapper{
     width: 90% !important;
   }
-  .sec_title{
-    font-size: 12px !important;
-  }
 }
 
 @media (max-width: 480px) {
@@ -238,9 +235,6 @@
   .fixed-top-wrapper{
     width: 90% !important;
   }
-  .sec_title{
-    font-size: 12px !important;
-  }
 }
 
 @media (max-width: 375px) {
@@ -251,10 +245,6 @@
     font-size: 12px;
   }
   .download {
-    font-size: 12px;
-  }
-
-  .sec_title{
     font-size: 12px;
   }
  

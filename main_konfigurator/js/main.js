@@ -337,7 +337,7 @@ additional_buttons.forEach((option) => {
 // Обработка клика на сохранение изображения
 
 download_button.addEventListener('click', () => {
-    document.querySelector('.main-div').scrollIntoView({behavior: "smooth"});
+    document.querySelector('.main-div').scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
         document.body.style.overflow = 'hidden';
         document.querySelector('.loader').classList.remove('hide');
@@ -352,43 +352,41 @@ download_button.addEventListener('click', () => {
         domtoimage.toPng(target, {
             bgcolor: '#1d1827'
         })
-<<<<<<< HEAD
-        .then(function (dataUrl) {
-            target.style.backgroundImage = "none";
-            target.style.borderRadius = '25px';
-            document.querySelector('.main_price').classList.remove('hide');
-    
-            let newWindow = window.open("", "_blank");
-            let img = new Image();
-            img.src = dataUrl;
-            newWindow.document.body.appendChild(img);
-    
-            document.querySelector('.loader').classList.add('hide');
-            document.body.style.overflow = 'auto';
-        })
-        .catch(function (error) {
-            console.error('Ошибка!', error);
-        });
-    });
-=======
             .then(function (dataUrl) {
                 target.style.backgroundImage = "none";
-                target.style.borderRadius = '25px'
+                target.style.borderRadius = '25px';
                 document.querySelector('.main_price').classList.remove('hide');
-                let a = document.createElement('a');
-                a.href = dataUrl
-                a.download = 'somefilename.png';
-                a.click();
-                document.querySelector('.loader').classList.add('hide')
+
+                let modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.left = '0';
+                modal.style.top = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                modal.style.zIndex = '9999';
+                let img = new Image();
+                img.src = dataUrl;
+                img.style.display = 'block';
+                img.style.margin = 'auto';
+                img.style.marginTop = '10%';
+                img.style.maxWidth = '90%';  
+                img.style.maxHeight = '90%'; 
+                img.style.objectFit = 'contain';
+                modal.appendChild(img);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', () => {
+                    document.body.removeChild(modal);
+                });
+
+                document.querySelector('.loader').classList.add('hide');
                 document.body.style.overflow = 'auto';
             })
             .catch(function (error) {
-                console.error('oops, something went wrong!', error);
+                console.error('Ошибка!', error);
             });
-
-    }, 3000)
-
->>>>>>> e46b8551083c274f2aba4e95878b122e18c53f72
+    });
 })
 
 // Обработка события клика на чекбокс блютуз версии

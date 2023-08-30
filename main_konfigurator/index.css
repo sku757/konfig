@@ -803,9 +803,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-decoration: none;
-  color: white;
-  padding-left: 10px;
 }
 .div14 {
   font-size: 14px;
@@ -962,7 +959,7 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-family: "Days One", sans-serif;
-  height: 100px;
+  height: 193px;
 }
 
 .accordion {
@@ -1438,10 +1435,3 @@ button[disabled] {
 .buy_watch:hover{
   border-bottom: 1px solid #C8FF2A;
 }
-
-.sec_title{
-  font-size: 14px;
-  color: gray;
-  padding-top: 5px;
-}
-
