@@ -352,6 +352,7 @@ download_button.addEventListener('click', () => {
         domtoimage.toPng(target, {
             bgcolor: '#1d1827'
         })
+<<<<<<< HEAD
         .then(function (dataUrl) {
             target.style.backgroundImage = "none";
             target.style.borderRadius = '25px';
@@ -369,6 +370,25 @@ download_button.addEventListener('click', () => {
             console.error('Ошибка!', error);
         });
     });
+=======
+            .then(function (dataUrl) {
+                target.style.backgroundImage = "none";
+                target.style.borderRadius = '25px'
+                document.querySelector('.main_price').classList.remove('hide');
+                let a = document.createElement('a');
+                a.href = dataUrl
+                a.download = 'somefilename.png';
+                a.click();
+                document.querySelector('.loader').classList.add('hide')
+                document.body.style.overflow = 'auto';
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong!', error);
+            });
+
+    }, 3000)
+
+>>>>>>> e46b8551083c274f2aba4e95878b122e18c53f72
 })
 
 // Обработка события клика на чекбокс блютуз версии
