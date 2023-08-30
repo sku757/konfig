@@ -340,34 +340,35 @@ download_button.addEventListener('click', () => {
     document.querySelector('.main-div').scrollIntoView({behavior: "smooth"});
     setTimeout(() => {
         document.body.style.overflow = 'hidden';
-        document.querySelector('.loader').classList.remove('hide')
+        document.querySelector('.loader').classList.remove('hide');
 
         let target = document.querySelector('.main_watch');
+
         document.querySelector('.main_price').classList.add('hide');
         target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
-        target.style.borderRadius = '0px'
-        target.style.backgroundRepeat = 'repeat-y'
+        target.style.borderRadius = '0px';
+        target.style.backgroundRepeat = 'repeat-y';
 
         domtoimage.toPng(target, {
             bgcolor: '#1d1827'
         })
-            .then(function (dataUrl) {
-                target.style.backgroundImage = "none";
-                target.style.borderRadius = '25px'
-                document.querySelector('.main_price').classList.remove('hide');
-                let a = document.createElement('a');
-                a.href = dataUrl
-                a.download = 'somefilename.png';
-                a.click();
-                document.querySelector('.loader').classList.add('hide')
-                document.body.style.overflow = 'auto';
-            })
-            .catch(function (error) {
-                console.error('oops, something went wrong!', error);
-            });
-
-    }, 1000)
-
+        .then(function (dataUrl) {
+            target.style.backgroundImage = "none";
+            target.style.borderRadius = '25px';
+            document.querySelector('.main_price').classList.remove('hide');
+    
+            let newWindow = window.open("", "_blank");
+            let img = new Image();
+            img.src = dataUrl;
+            newWindow.document.body.appendChild(img);
+    
+            document.querySelector('.loader').classList.add('hide');
+            document.body.style.overflow = 'auto';
+        })
+        .catch(function (error) {
+            console.error('Ошибка!', error);
+        });
+    });
 })
 
 // Обработка события клика на чекбокс блютуз версии
