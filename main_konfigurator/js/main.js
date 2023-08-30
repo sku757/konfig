@@ -338,6 +338,7 @@ additional_buttons.forEach((option) => {
 
 download_button.addEventListener('click', () => {
     document.querySelector('.main-div').scrollIntoView({ behavior: "smooth" });
+
     setTimeout(() => {
         document.body.style.overflow = 'hidden';
         document.querySelector('.loader').classList.remove('hide');
@@ -349,46 +350,49 @@ download_button.addEventListener('click', () => {
         target.style.borderRadius = '0px';
         target.style.backgroundRepeat = 'repeat-y';
 
-        setTimeout(() => {
-            domtoimage.toSvg(target, {
-                bgcolor: '#1d1827'
-            })
-                .then(function (dataUrl) {
-                    target.style.backgroundImage = "none";
-                    target.style.borderRadius = '25px';
-                    document.querySelector('.main_price').classList.remove('hide');
-
-                    let modal = document.createElement('div');
-                    modal.style.position = 'fixed';
-                    modal.style.left = '0';
-                    modal.style.top = '0';
-                    modal.style.width = '100%';
-                    modal.style.height = '100%';
-                    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-                    modal.style.zIndex = '9999';
-                    let img = new Image();
-                    img.src = dataUrl;
-                    img.style.display = 'block';
-                    img.style.margin = 'auto';
-                    img.style.marginTop = '10%';
-                    img.style.maxWidth = '90%';
-                    img.style.maxHeight = '90%';
-                    img.style.objectFit = 'contain';
-                    modal.appendChild(img);
-                    document.body.appendChild(modal);
-
-                    modal.addEventListener('click', () => {
-                        document.body.removeChild(modal);
-                    });
-
-                    document.querySelector('.loader').classList.add('hide');
-                    document.body.style.overflow = 'auto';
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                domtoimage.toSvg(target, {
+                    bgcolor: '#1d1827'
                 })
-                .catch(function (error) {
-                    console.error('Ошибка!', error);
-                });
-        }, 3500);
+                    .then(function (dataUrl) {
+                        target.style.backgroundImage = "none";
+                        target.style.borderRadius = '25px';
+                        document.querySelector('.main_price').classList.remove('hide');
 
+                        let modal = document.createElement('div');
+                        modal.style.position = 'fixed';
+                        modal.style.left = '0';
+                        modal.style.top = '0';
+                        modal.style.width = '100%';
+                        modal.style.height = '100%';
+                        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                        modal.style.zIndex = '9999';
+
+                        let img = new Image();
+                        img.src = dataUrl;
+                        img.style.display = 'block';
+                        img.style.margin = 'auto';
+                        img.style.marginTop = '10%';
+                        img.style.maxWidth = '90%';
+                        img.style.maxHeight = '90%';
+                        img.style.objectFit = 'contain';
+                        modal.appendChild(img);
+
+                        document.body.appendChild(modal);
+
+                        modal.addEventListener('click', () => {
+                            document.body.removeChild(modal);
+                        });
+
+                        document.querySelector('.loader').classList.add('hide');
+                        document.body.style.overflow = 'auto';
+                    })
+                    .catch(function (error) {
+                        console.error('Ошибка!', error);
+                    });
+            }, 3500);
+        });
     }, 1000);
 });
 
