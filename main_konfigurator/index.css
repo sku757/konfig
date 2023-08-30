@@ -1435,3 +1435,8 @@ button[disabled] {
 .buy_watch:hover{
   border-bottom: 1px solid #C8FF2A;
 }
+
+.msg_under{
+  font-size: 14px;
+  color: gray;
+}
