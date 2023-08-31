@@ -210,6 +210,10 @@
   .fixed-top-wrapper{
     width: 90% !important;
   }
+  .msg_under{
+    width: 80% !important;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -234,6 +238,9 @@
   }
   .fixed-top-wrapper{
     width: 90% !important;
+  }
+  .msg_under{
+    width: 100% !important;
   }
 }
 
