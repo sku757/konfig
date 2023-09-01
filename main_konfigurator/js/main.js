@@ -352,7 +352,7 @@ download_button.addEventListener('click', () => {
 
         requestAnimationFrame(() => {
             setTimeout(() => {
-                domtoimage.toSvg(target, {
+                domtoimage.toPng(target, {
                     bgcolor: '#1d1827'
                 })
                     .then(function (dataUrl) {
