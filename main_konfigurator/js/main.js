@@ -346,9 +346,11 @@ download_button.addEventListener('click', () => {
         let target = document.querySelector('.main_watch');
 
         document.querySelector('.main_price').classList.add('hide');
-        target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
+        // target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
         target.style.borderRadius = '0px';
         target.style.backgroundRepeat = 'repeat-y';
+        // target.style.width = '100px'
+        // target.style.height = '100px'
 
         requestAnimationFrame(() => {
             setTimeout(() => {
