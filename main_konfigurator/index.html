@@ -36,22 +36,22 @@
     <div class="wrapper">
       <div class="main-div">
         <div class="vector-parent">
-          <div class="logo">
+          <a class="logo" href="https://ufflook.ru">
             <img class="vector-icon" alt="" src="./public/vector.svg" />
-          </div>
+          </a>
           <div class="header-info">
             <!-- <div class="div11">КОНФИГУРАТОР</div>
             <div class="telegram">TELEGRAM</div>
             <div class="div10">+7 (999) 999 99 99</div> -->
             <div class="buy-wrapper">
               <div class="div9"><a class="buy_watch" href="https://t.me/ufflook_bot">КУПИТЬ ЧАСЫ</a></div>
-              <div class="buy_arrow">
+              <!-- <div class="buy_arrow"> -->
                 <!-- <img
                   class="arrow-right-up-358-svgrepo-com-icon"
                   alt=""
                   src="./public/arrowrightup358svgrepocom-1.svg"
                 /> -->
-              </div>
+              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -70,13 +70,27 @@
             <div class="left">
               <div class="edit_watch">
                 <div class="strap_option metal_strap_option selected_option">
-                  МЕТАЛЛИЧЕСКИЙ РЕМЕШОК
+                  МЕТАЛЛИЧЕСКИЙ РЕМЕШОК  
                 </div>
                 <div class="strap_option rubber_strap_option">
                   КАУЧУКОВЫЙ РЕМЕШОК
-                </div>
-
-                <div class="form-check">
+                </div>    
+                <div class="abs"> <img
+                  class="ques"
+                  alt=""
+                  src="./public/ques (1).svg"
+                /> <span class="bl">Bluetooth</span>
+                <span class="tooltiptext">Также есть возможность собрать кастом на версии часов с Bluetooth, уточняйте у менеджера.</span></div> 
+                <div class="abs asb"> <img
+                  class="ques"
+                  alt=""
+                  src="./public/weight.svg"
+                /> <span class="bl">Размеры</span>
+                <span class="tooltiptextt">Диаметр циферблата: 42.7 мм<br>Размер циферблата с корпусом: 54.7 мм<br>Ширина часов: 12.8 мм</span></div> 
+                
+                
+                
+                <!-- <div class="form-check">
                   <div class="cntr">
                     <input
                       value=""
@@ -87,31 +101,9 @@
                     <label for="cbx" class="cbx"></label>
                   </div>
                   <div>Версия bluetooth</div>
-                </div>
+                </div> -->
 
                 <div class="accordion" id="accordion">
-                  <div class="accordion-item select_button_block">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed edit_name"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseDisplay"
-                        aria-expanded="true"
-                        aria-controls="collapseDisplay"
-                      >
-                        <div class="edit_name">Дисплей</div>
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseDisplay"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordion"
-                    >
-                      <div class="accordion-body displays"></div>
-                    </div>
-                  </div>
-
                   <div
                     class="accordion-item select_button_block rubber_strap_option_selected hide"
                   >
@@ -208,27 +200,7 @@
                     </div>
                   </div>
 
-                  <div class="accordion-item select_button_block">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button collapsed edit_name"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseArrows"
-                        aria-expanded="true"
-                        aria-controls="collapseArrows"
-                      >
-                        <div class="edit_name">Стрелки</div>
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseArrows"
-                      class="accordion-collapse collapse"
-                      data-bs-parent="#accordion"
-                    >
-                      <div class="accordion-body arrows"></div>
-                    </div>
-                  </div>
+                  
 
                   <div class="accordion-item select_button_block">
                     <h2 class="accordion-header">
@@ -240,7 +212,7 @@
                         aria-expanded="true"
                         aria-controls="collapseDials"
                       >
-                        <div class="edit_name">Цифреблат</div>
+                        <div class="edit_name">Циферблат</div>
                       </button>
                     </h2>
                     <div
@@ -249,6 +221,28 @@
                       data-bs-parent="#accordion"
                     >
                       <div class="accordion-body dials"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseDisplay"
+                        aria-expanded="true"
+                        aria-controls="collapseDisplay"
+                      >
+                        <div class="edit_name">Дисплей</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseDisplay"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body displays"></div>
                     </div>
                   </div>
 
@@ -302,6 +296,28 @@
                         class="accordion-button collapsed edit_name"
                         type="button"
                         data-bs-toggle="collapse"
+                        data-bs-target="#collapseArrows"
+                        aria-expanded="true"
+                        aria-controls="collapseArrows"
+                      >
+                        <div class="edit_name">Стрелки</div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseArrows"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordion"
+                    >
+                      <div class="accordion-body arrows"></div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item select_button_block">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed edit_name"
+                        type="button"
+                        data-bs-toggle="collapse"
                         data-bs-target="#collapseAdditional"
                         aria-expanded="true"
                         aria-controls="collapseAdditional"
@@ -321,6 +337,12 @@
                         <div data-id="engraving" class="addition-item">
                           Гравировка
                         </div>
+                        <div class="abs"> <img
+                          class="ques"
+                          alt=""
+                          src="./public/ques_dop.svg"
+                        /> <span class="bl">Информация</span>
+                        <span class="tooltiptext">Наличие стекол уточняйте у менеджера. Текст гравировки также отправляется менеджеру.</span></div> 
                       </div>
                     </div>
                   </div>
@@ -424,7 +446,7 @@
                   </div>
                   <div class="actions-buttons">
                     <div class="download">Сохранить</div>
-                    <div class="send_text">Чтобы отправить заказ нажмите на кнопку "Сохранить" и отправьте данную фотографию нашему менеджеру в <a class="tg" href="https://yandex.ru">Telegram.</a> </div>
+                    <div class="send_text">Чтобы отправить заказ нажмите на кнопку "Сохранить" и отправьте данную фотографию нашему менеджеру в <a class="tg" href="https://t.me/ufflook_manager_bot">Telegram.</a> </div>
                     <!-- <div class="group-child">
                         <div class="div12">ОТПРАВИТЬ</div>
                         <img

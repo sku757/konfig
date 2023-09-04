@@ -311,6 +311,7 @@ additional_buttons.forEach((option) => {
     })
 })
 
+
 download_button.addEventListener('click', () => {
     document.querySelector('.main-div').scrollIntoView({ behavior: "smooth" });
 
@@ -342,7 +343,7 @@ download_button.addEventListener('click', () => {
                         modal.style.top = '0';
                         modal.style.width = '100%';
                         modal.style.height = '100%';
-                        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
                         modal.style.zIndex = '9999';
                         modal.style.display = 'flex';
                         modal.style.flexDirection = 'column';
@@ -368,6 +369,7 @@ download_button.addEventListener('click', () => {
                         saveAsButton.style.backgroundColor = 'white'
                         saveAsButton.style.color = 'black'
                         saveAsButton.style.position = 'relative'
+                        saveAsButton.style.fontFamily = '"Days One", sans-serif'; 
                         modal.appendChild(saveAsButton);
 
                         // Обработчик для новой кнопки
