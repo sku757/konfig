@@ -311,31 +311,6 @@ additional_buttons.forEach((option) => {
     })
 })
 
-// // Функция отправки формы
-// const sendRequest = async (message) => {
-//     return await fetch('https://someCrm.org', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json;charset=utf-8'
-//         },
-//         body: JSON.stringify(message)
-//     });
-// }
-
-// // Действие при клике на кнопку отправить
-// send_button.addEventListener('click', () => {
-//     let resultObject = metal_strap_selected ? metalPickedOptions : rubberPickedOptions;
-//     resultObject['telegram'] = document.querySelector('.telegram-nickname').value;
-//     resultObject['comment'] = document.querySelector('.comment').value;
-//     sendRequest(resultObject).then(r => console.log(r));
-// })
-
-// telegram_input.oninput = (e) => {
-//     send_button.disabled = !e.target.value;
-// }
-
-// Обработка клика на сохранение изображения
-
 download_button.addEventListener('click', () => {
     document.querySelector('.main-div').scrollIntoView({ behavior: "smooth" });
 
@@ -346,16 +321,15 @@ download_button.addEventListener('click', () => {
         let target = document.querySelector('.main_watch');
 
         document.querySelector('.main_price').classList.add('hide');
-        // target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
+        target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
         target.style.borderRadius = '0px';
         target.style.backgroundRepeat = 'repeat-y';
-        // target.style.width = '100px'
-        // target.style.height = '100px'
 
         requestAnimationFrame(() => {
             setTimeout(() => {
-                domtoimage.toPng(target, {
-                    bgcolor: '#1d1827'
+                domtoimage.toSvg(target, {
+                    bgcolor: '#1d1827',
+                    scale: window.innerWidth < 1024 ? 2 : 1
                 })
                     .then(function (dataUrl) {
                         target.style.backgroundImage = "none";
@@ -370,18 +344,60 @@ download_button.addEventListener('click', () => {
                         modal.style.height = '100%';
                         modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
                         modal.style.zIndex = '9999';
-
+                        modal.style.display = 'flex';
+                        modal.style.flexDirection = 'column';
+                        modal.style.alignItems = 'center';
+                        modal.style.justifyContent = 'center';
+                        
                         let img = new Image();
                         img.src = dataUrl;
                         img.style.display = 'block';
-                        img.style.margin = 'auto';
-                        img.style.marginTop = '10%';
+                        // img.style.margin = 'auto';
+                        // img.style.marginTop = '10%';
                         img.style.maxWidth = '90%';
                         img.style.maxHeight = '90%';
                         img.style.objectFit = 'contain';
-                        modal.appendChild(img);
 
+                        modal.appendChild(img);
                         document.body.appendChild(modal);
+
+                        // Новая кнопка для сохранения как PNG
+                        let saveAsButton = document.createElement('button');
+                        saveAsButton.innerHTML = "Скачать";
+                        saveAsButton.className = 'actions-buttons download'
+                        saveAsButton.style.backgroundColor = 'white'
+                        saveAsButton.style.color = 'black'
+                        saveAsButton.style.position = 'relative'
+                        modal.appendChild(saveAsButton);
+
+                        // Обработчик для новой кнопки
+                        saveAsButton.addEventListener('click', () => {
+                            let img = new Image();
+                            img.src = dataUrl;
+
+                            img.onload = function () {
+                                // Исходные размеры для десктопной версии
+                                const desktopWidth = 815;
+                                const desktopHeight = 515;
+
+                                let canvas = document.createElement('canvas');
+                                canvas.width = desktopWidth;
+                                canvas.height = desktopHeight;
+                                let ctx = canvas.getContext('2d');
+                                ctx.drawImage(img, 0, 0, desktopWidth, desktopHeight);
+
+
+                                let pngUrl = canvas.toDataURL('image/png', 1);  // 1 - качество изображения
+                                // Скачивание PNG
+                                let a = document.createElement('a');
+                                a.href = pngUrl;
+                                a.download = 'image.png';
+                                a.type = 'image/png';
+                                document.body.appendChild(a);
+                                a.click();
+                                document.body.removeChild(a);
+                            };
+                        });
 
                         modal.addEventListener('click', () => {
                             document.body.removeChild(modal);
@@ -397,6 +413,7 @@ download_button.addEventListener('click', () => {
         });
     }, 1000);
 });
+
 
 // Обработка события клика на чекбокс блютуз версии
 
