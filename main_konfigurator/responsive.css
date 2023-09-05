@@ -159,6 +159,9 @@
     border-radius: 15px;
     font-size: 16px;
   }
+  .bl{
+    font-size: 16px;
+  }
   .form-check {
     justify-content: center;
     margin: 0.5rem 0;
