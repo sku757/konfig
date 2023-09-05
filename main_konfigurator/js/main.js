@@ -352,45 +352,85 @@ download_button.addEventListener('click', () => {
 
         requestAnimationFrame(() => {
             setTimeout(() => {
-                domtoimage.toPng(target, {
-                    bgcolor: '#1d1827'
+                domtoimage.toSvg(target, {
+                    bgcolor: '#1d1827',
+                    scale: window.innerWidth < 1024 ? 2 : 1
                 })
-                    .then(function (dataUrl) {
-                        target.style.backgroundImage = "none";
-                        target.style.borderRadius = '25px';
-                        document.querySelector('.main_price').classList.remove('hide');
+                .then(function (dataUrl) {
+                    target.style.backgroundImage = "none";
+                    target.style.borderRadius = '25px';
+                    document.querySelector('.main_price').classList.remove('hide');
 
-                        let modal = document.createElement('div');
-                        modal.style.position = 'fixed';
-                        modal.style.left = '0';
-                        modal.style.top = '0';
-                        modal.style.width = '100%';
-                        modal.style.height = '100%';
-                        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-                        modal.style.zIndex = '9999';
+                    let modal = document.createElement('div');
+                    modal.style.position = 'fixed';
+                    modal.style.left = '0';
+                    modal.style.top = '0';
+                    modal.style.width = '100%';
+                    modal.style.height = '100%';
+                    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                    modal.style.zIndex = '9999';
 
+                    let img = new Image();
+                    img.src = dataUrl;
+                    img.style.display = 'block';
+                    img.style.margin = 'auto';
+                    img.style.marginTop = '10%';
+                    img.style.maxWidth = '90%';
+                    img.style.maxHeight = '90%';
+                    img.style.objectFit = 'contain';
+
+                    modal.appendChild(img);
+                    document.body.appendChild(modal);
+
+                    // Новая кнопка для сохранения как PNG
+                    let saveAsButton = document.createElement('button');
+                    saveAsButton.innerHTML = "Сохранить как PNG";
+                    saveAsButton.style.position = 'absolute';
+                    saveAsButton.style.bottom = '10px';
+                    saveAsButton.style.right = '10px';
+                    saveAsButton.style.zIndex = '10000';
+                    modal.appendChild(saveAsButton);
+
+                    // Обработчик для новой кнопки
+                    saveAsButton.addEventListener('click', () => {
                         let img = new Image();
                         img.src = dataUrl;
-                        img.style.display = 'block';
-                        img.style.margin = 'auto';
-                        img.style.marginTop = '10%';
-                        img.style.maxWidth = '90%';
-                        img.style.maxHeight = '90%';
-                        img.style.objectFit = 'contain';
-                        modal.appendChild(img);
+                    
+                        img.onload = function () {
+                            // Исходные размеры для десктопной версии
+                            const desktopWidth = 815;  
+                            const desktopHeight = 515; 
+                    
+                            // Создание холста с размерами для десктопной версии
+                            let canvas = document.createElement('canvas');
+                            canvas.width = desktopWidth;
+                            canvas.height = desktopHeight;
+                            let ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, desktopWidth, desktopHeight);
+                    
 
-                        document.body.appendChild(modal);
-
-                        modal.addEventListener('click', () => {
-                            document.body.removeChild(modal);
-                        });
-
-                        document.querySelector('.loader').classList.add('hide');
-                        document.body.style.overflow = 'auto';
-                    })
-                    .catch(function (error) {
-                        console.error('Ошибка!', error);
+                            let pngUrl = canvas.toDataURL('image/png', 1);  // 1 - качество изображения
+                    
+                            // Скачивание PNG
+                            let a = document.createElement('a');
+                            a.href = pngUrl;
+                            a.download = 'image.png';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        };
                     });
+
+                    modal.addEventListener('click', () => {
+                        document.body.removeChild(modal);
+                    });
+                    
+                    document.querySelector('.loader').classList.add('hide');
+                    document.body.style.overflow = 'auto';
+                })
+                .catch(function (error) {
+                    console.error('Ошибка!', error);
+                });
             }, 3500);
         });
     }, 1000);
