@@ -236,7 +236,7 @@ const getBluetoothElements = (groupName, nums, defaultIndex) => {
 const groupsCountItems = {
     dials: 66,
     displays: 3,
-    metal_body: 20,
+    metal_body: 21,
     transparent_body: 4,
     straps: 13,
     metal_straps: 31,
