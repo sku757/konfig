@@ -10,6 +10,7 @@ let bluetooth_option = document.querySelector('#cbx');
 
 // Настройка дефолтных деталей
 const defaultValues = {
+    dials: 17,
     displays: 1,
     metal_body: 1,
     straps: 5,
@@ -17,7 +18,6 @@ const defaultValues = {
     circles: 1,
     arrows: 1,
     clock_points: 1,
-    dials: 17
 }
 
 // Опции доступные для блютуз версии
@@ -37,29 +37,29 @@ const additionalPrices = {
 
 // Выбранные детали при металлическом ремешке
 let metalPickedOptions = {
+    dials: 17,
     displays: 1,
     metal_straps: 11,
     circles: 1,
     arrows: 1,
     clock_points: 1,
-    dials: 17
 }
 
 // Выбранные детали при каучуковом ремешке
 
 let rubberPickedOptions = {
+    dials: 17,
     displays: 1,
     metal_body: 1,
     straps: 5,
     circles: 1,
     arrows: 1,
     clock_points: 1,
-    dials: 17
 }
 
 
 // Группы элементов влияющих на цену
-const groupsChangesPrice = ['circles', 'arrows', 'clock_points', 'dials']
+const groupsChangesPrice = ['dials', 'circles', 'arrows', 'clock_points']
 
 
 // Функция смены цены
@@ -234,6 +234,7 @@ const getBluetoothElements = (groupName, nums, defaultIndex) => {
 
 // Количество элементов в каждой группе
 const groupsCountItems = {
+    dials: 35,
     displays: 3,
     metal_body: 21,
     transparent_body: 4,
@@ -242,9 +243,9 @@ const groupsCountItems = {
     circles: 18,
     arrows: 15,
     clock_points: 19,
-    dials: 35
 }
 
+getElements(groupsCountItems['dials'],'dials', defaultValues['dials']);
 getElements(groupsCountItems['displays'],'displays', defaultValues['displays']);
 getElements(groupsCountItems['metal_body'],'metal_body', defaultValues['metal_body']);
 getElements(groupsCountItems['transparent_body'],'transparent_body');
@@ -253,7 +254,7 @@ getElements(groupsCountItems['metal_straps'],'metal_straps', defaultValues['meta
 getElements(groupsCountItems['circles'],'circles', defaultValues['circles']);
 getElements(groupsCountItems['arrows'],'arrows', defaultValues['arrows']);
 getElements(groupsCountItems['clock_points'],'clock_points', defaultValues['clock_points']);
-getElements(groupsCountItems['dials'],'dials', defaultValues['dials']);
+
 
 const resetToDefaults = (type) => {
     switch (type){
