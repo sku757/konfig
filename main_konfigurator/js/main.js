@@ -242,7 +242,7 @@ const groupsCountItems = {
     metal_straps: 31,
     circles: 18,
     arrows: 15,
-    clock_points: 19,
+    clock_points: 20,
 }
 
 getElements(groupsCountItems['dials'],'dials', defaultValues['dials']);

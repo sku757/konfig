@@ -1525,3 +1525,8 @@ button[disabled] {
 .bl:hover{
   opacity: 1;
 }
+
+.info_watch{
+  font-size: 18px;
+  color: gray;
+}
