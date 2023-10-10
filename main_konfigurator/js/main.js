@@ -173,9 +173,57 @@ const changeElement = (el, name, num) => {
     }
 
     document.getElementById(name+"_watch").src = `https://raw.githubusercontent.com/sku757/konfig/main/image//${name}/${name}${num}.png`;
-    for (let item of el.parentNode.childNodes) {
-        item.classList &&  item.classList.remove('select_button_active');
+    const infoTextElement = document.getElementById("info-text");
+    const infoTextElement1 = document.getElementById("info-text1");
+    const infoTextElement2 = document.getElementById("info-text2");
+    infoTextElement.style.display = "none";
+    infoTextElement1.style.display = "none";
+    infoTextElement2.style.display = "none";
+    
+    if (name === 'metal_straps' && num === 16 && metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 17 && metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 18 && metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 19 && metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 20 && metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 21 && metal_strap_selected) {
+        infoTextElement1.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 22 && metal_strap_selected) {
+        infoTextElement1.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 23 && metal_strap_selected) {
+        infoTextElement2.style.display = "block"; 
+    } 
+    if (name === 'metal_straps' && num === 24 && metal_strap_selected) {
+        infoTextElement2.style.display = "block"; 
+    } 
+    if (name === 'metal_body' && num === 17 && !metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
     }
+    if (name === 'metal_body' && num === 18 && !metal_strap_selected) {
+        infoTextElement1.style.display = "block"; 
+    }
+    if (name === 'metal_body' && num === 19 && !metal_strap_selected) {
+        infoTextElement1.style.display = "block"; 
+    }
+    if (name === 'metal_body' && num === 20 && !metal_strap_selected) {
+        infoTextElement.style.display = "block"; 
+    }
+
+    for (let item of el.parentNode.childNodes) {
+        item.classList && item.classList.remove('select_button_active');
+    }
+
     el.classList.toggle('select_button_active');
     if(name === 'transparent_body') {
         document.querySelector('.metal_body_watch').classList.add('hide');
@@ -347,6 +395,7 @@ download_button.addEventListener('click', () => {
         let target = document.querySelector('.main_watch');
 
         document.querySelector('.main_price').classList.add('hide');
+        document.querySelector('.info-text').classList.add('hide');
         target.style.backgroundImage = "url('https://raw.githubusercontent.com/sku757/konfig/main/image/bg/bg.png')";
         target.style.borderRadius = '0px';
         target.style.backgroundRepeat = 'repeat-y';
@@ -361,7 +410,7 @@ download_button.addEventListener('click', () => {
                     target.style.backgroundImage = "none";
                     target.style.borderRadius = '25px';
                     document.querySelector('.main_price').classList.remove('hide');
-
+                    document.querySelector('.info-text').classList.remove('hide');
                     let modal = document.createElement('div');
                     modal.style.position = 'fixed';
                     modal.style.left = '0';
@@ -372,25 +421,29 @@ download_button.addEventListener('click', () => {
                     modal.style.zIndex = '9999';
 
                     let img = new Image();
-                    img.src = dataUrl;
-                    img.style.display = 'block';
-                    img.style.margin = 'auto';
-                    img.style.marginTop = '10%';
-                    img.style.maxWidth = '90%';
-                    img.style.maxHeight = '90%';
-                    img.style.objectFit = 'contain';
+                        img.src = dataUrl;
+                        img.style.display = 'block';
+                        img.style.margin = 'auto';
+                        img.style.marginTop = '10%';
+                        img.style.maxWidth = '90%';
+                        img.style.maxHeight = '90%';
+                        img.style.objectFit = 'contain';
 
-                    modal.appendChild(img);
-                    document.body.appendChild(modal);
+                        modal.appendChild(img);
+                        document.body.appendChild(modal);
 
-                    // Новая кнопка для сохранения как PNG
-                    let saveAsButton = document.createElement('button');
-                    saveAsButton.innerHTML = "Сохранить как PNG";
-                    saveAsButton.style.position = 'absolute';
-                    saveAsButton.style.bottom = '10px';
-                    saveAsButton.style.right = '10px';
-                    saveAsButton.style.zIndex = '10000';
-                    modal.appendChild(saveAsButton);
+                        // Новая кнопка для сохранения как PNG
+                        let saveAsButton = document.createElement('button');
+                        saveAsButton.innerHTML = "Скачать";
+                        saveAsButton.className = 'actions-buttons download'
+                        saveAsButton.style.fontFamily = '"Days One", sans-serif'; 
+                        saveAsButton.style.backgroundColor = 'none'
+                        saveAsButton.style.position = 'relative'
+                        saveAsButton.style.color = 'black'
+                        saveAsButton.style.margin = 'auto'
+                        saveAsButton.style.marginTop = '25px'
+                        saveAsButton.style.backgroundColor = 'white'
+                        modal.appendChild(saveAsButton);
 
                     // Обработчик для новой кнопки
                     saveAsButton.addEventListener('click', () => {
