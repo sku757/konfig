@@ -254,10 +254,10 @@ const changeElement = (el, name, num) => {
 
 
     if(!isSelectedSomeAdditionalBeforeChange && isSelectedSomeAdditionalAfterChange){
-        changePrice(2)
+        changePrice(3)
     }
     if(isSelectedSomeAdditionalBeforeChange && !isSelectedSomeAdditionalAfterChange){
-        changePrice(-2)
+        changePrice(-3)
     }
 }
 
