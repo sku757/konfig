@@ -445,8 +445,8 @@ download_button.addEventListener('click', () => {
                         saveAsButton.style.backgroundColor = 'white'
                         modal.appendChild(saveAsButton);
 
-                    // Обработчик для новой кнопки
-                    saveAsButton.addEventListener('click', () => {
+                        // Обработчик для новой кнопки
+                        saveAsButton.addEventListener('click', () => {
                         let img = new Image();
                         img.src = dataUrl;
                     
@@ -461,10 +461,8 @@ download_button.addEventListener('click', () => {
                             canvas.height = desktopHeight;
                             let ctx = canvas.getContext('2d');
                             ctx.drawImage(img, 0, 0, desktopWidth, desktopHeight);
-                    
-
                             let pngUrl = canvas.toDataURL('image/png', 1);  // 1 - качество изображения
-                    
+
                             // Скачивание PNG
                             let a = document.createElement('a');
                             a.href = pngUrl;
@@ -476,7 +474,7 @@ download_button.addEventListener('click', () => {
                     });
 
                     modal.addEventListener('click', () => {
-                        document.body.removeChild(modal);
+                    document.body.removeChild(modal);
                     });
                     
                     document.querySelector('.loader').classList.add('hide');
