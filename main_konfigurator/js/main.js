@@ -18,6 +18,7 @@ const defaultValues = {
     circles: 1,
     arrows: 1,
     clock_points: 1,
+    mechanic: 1,
 }
 
 // Опции доступные для блютуз версии
@@ -43,6 +44,7 @@ let metalPickedOptions = {
     circles: 1,
     arrows: 1,
     clock_points: 1,
+    mechanic: 1,
 }
 
 // Выбранные детали при каучуковом ремешке
@@ -55,6 +57,7 @@ let rubberPickedOptions = {
     circles: 1,
     arrows: 1,
     clock_points: 1,
+    mechanic: 1,
 }
 
 
@@ -291,6 +294,7 @@ const groupsCountItems = {
     circles: 16,
     arrows: 17,
     clock_points: 16,
+    mechanic: 5,
 }
 
 getElements(groupsCountItems['dials'],'dials', defaultValues['dials']);
@@ -302,6 +306,7 @@ getElements(groupsCountItems['metal_straps'],'metal_straps', defaultValues['meta
 getElements(groupsCountItems['circles'],'circles', defaultValues['circles']);
 getElements(groupsCountItems['arrows'],'arrows', defaultValues['arrows']);
 getElements(groupsCountItems['clock_points'],'clock_points', defaultValues['clock_points']);
+getElements(groupsCountItems['mechanic'],'mechanic', defaultValues['mechanic']);
 
 
 const resetToDefaults = (type) => {
